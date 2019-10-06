@@ -1,0 +1,61 @@
+.filters {
+  display: grid;
+  grid-gap: var(--spacing-medium);
+  grid-template-columns: repeat(2, 1fr);
+  width: auto;
+
+  & > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.filtersTitle {
+  color: var(--color-black);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.filtersCities,
+.filtersCourses {
+  & select {
+    appearance: none;
+    background-color: var(--color-white);
+    border-color: #a7acad;
+    margin-top: var(--spacing-tiny);
+    padding: var(--spacing-tiny);
+  }
+}
+
+.filtersCheckboxes {
+  align-items: center;
+  display: flex;
+  margin-top: var(--spacing-small);
+}
+
+.filtersCheckbox {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-left: var(--spacing-small);
+
+  &:first-child {
+    margin-left: unset;
+  }
+
+  & label {
+    font-size: 14px;
+    margin-left: var(--spacing-tiny);
+  }
+}
+
+@custom-media --vp-s (width <= 700px);
+
+@media (--vp-s) {
+  .filters {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

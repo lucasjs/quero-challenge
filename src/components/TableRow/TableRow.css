@@ -1,0 +1,46 @@
+td,
+th {
+  border-top: 2px solid #eeefef;
+  padding: var(--spacing-small);
+
+  &:first-child {
+    padding-left: unset;
+  }
+
+  &:last-child {
+    padding-right: unset;
+  }
+}
+
+.universityLogo {
+  text-align: center;
+  vertical-align: middle;
+
+  & img {
+    max-height: 40px;
+  }
+}
+
+.courseInfo {
+  color: var(--color-black);
+  font-size: 14px;
+  line-height: 22px;
+
+  & strong {
+    color: var(--color-blue-secondary);
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+.courseDiscount {
+  color: var(--color-black);
+  font-size: 16px;
+  line-height: 22px;
+  text-align: right;
+
+  & strong {
+    color: var(--color-green);
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,40 @@
+@import '~modern-normalize/modern-normalize.css';
+
+:root {
+  --color-blue-primary: #18ACC4;
+  --color-blue-secondary: #007A8D;
+  --color-yellow-primary: #FDCB13;
+  --color-yellow-secondary: #DE9E1F;
+  --color-green: #0FA866;
+  --color-white: #FFFFFF;
+  --color-black: #1F2D30;
+  --color-gray: #FBFBFB;
+  --spacing-large: 32px;
+  --spacing-medium: 24px;
+  --spacing-small: 16px;
+  --spacing-tiny: 8px;
+}
+
+:global(.container) {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+  width: 100%;
+}
+
+@media (--vp-l) {
+  :global(.container) {
+    padding-left: var(--spacing-medium);
+    padding-right: var(--spacing-medium);
+  }
+}
+
+@custom-media --vp-s (width <= 700px);
+@custom-media --vp-m (width <= 900px);
+@custom-media --vp-l (width <= 1200px);
+
+html,
+body {
+  font-family: 'Montserrat', sans-serif;
+}

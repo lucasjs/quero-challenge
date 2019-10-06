@@ -1,0 +1,120 @@
+.card,
+.addCard {
+  align-items: center;
+  background-color: var(--color-white);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.15);
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 450px;
+  padding: var(--spacing-medium);
+  width: auto;
+
+  &:hover {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+.addCard {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  & .addCardIcon {
+    color: var(--color-blue-secondary);
+  }
+
+  & .addCardText {
+    color: var(--color-black);
+    margin-top: var(--spacing-large);
+    text-align: center;
+  }
+
+  & .addCardTitle {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+
+  & .addCardSubtitle {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.section {
+  align-items: center;
+  border-bottom: 2px solid #eeefef;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--spacing-small) 0;
+  text-align: center;
+
+  &:first-child {
+    padding-top: unset;
+  }
+
+  &:last-child {
+    border-bottom: unset;
+    padding-bottom: unset;
+  }
+}
+
+.universityLogo {
+  max-height: 70px;
+  max-width: 100%;
+}
+
+.universityName,
+.courseInfo {
+  color: var(--color-black);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.courseName {
+  color: var(--color-blue-secondary);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.startDate {
+  color: var(--color-black);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.bottomTitle {
+  color: var(--color-black);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.bottomText,
+.fullPrice {
+  color: var(--color-black);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.fullPrice {
+  text-decoration: line-through;
+}
+
+.priceDiscount {
+  color: var(--color-black);
+  font-size: 12px;
+  font-weight: 400;
+
+  & strong {
+    color: var(--color-green);
+    font-size: 22px;
+    font-weight: 600;
+  }
+}

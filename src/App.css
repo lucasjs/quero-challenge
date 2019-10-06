@@ -1,0 +1,28 @@
+body.scrollLock {
+  overflow-y: hidden;
+}
+
+* {
+  transition: all 0.3s;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+.App {
+  position: relative;
+}
+
+@custom-media --vp-s (width <= 700px);
+
+@media (--vp-s) {
+  body.scrollLock {
+    position: fixed;
+  }
+}

@@ -1,0 +1,24 @@
+.rating {
+  align-items: center;
+  display: flex;
+}
+
+.value {
+  color: var(--color-black);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.stars {
+  display: inline-block;
+  margin-left: var(--spacing-tiny);
+}
+
+.star {
+  color: var(--color-yellow-primary);
+  margin-left: 5px;
+
+  &:first-child {
+    margin-left: unset;
+  }
+}

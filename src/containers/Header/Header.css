@@ -1,0 +1,173 @@
+.top {
+  background-color: var(--color-white);
+}
+
+.topItems {
+  align-items: center;
+  display: flex;
+  padding-bottom: var(--spacing-small);
+  padding-top: var(--spacing-small);
+  width: 100%;
+
+  & > * {
+    flex: 1;
+  }
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: var(--spacing-tiny);
+}
+
+.disclaimer {
+  align-items: center;
+  display: flex;
+}
+
+.disclaimerInfo {
+  align-items: center;
+  color: var(--color-blue-secondary);
+  display: flex;
+
+  & .title {
+    margin-left: var(--spacing-tiny);
+  }
+}
+
+.disclaimerContact {
+  align-items: center;
+  border-color: #eeefef;
+  border-style: solid;
+  border-width: 0 0 0 2px;
+  color: var(--color-blue-secondary);
+  display: flex;
+  height: 50px;
+  margin-left: var(--spacing-medium);
+  padding-left: var(--spacing-medium);
+}
+
+.disclaimerContactTexts {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: var(--spacing-tiny);
+}
+
+.whatsappIcon {
+  color: var(--color-green);
+}
+
+.logo {
+  max-width: 150px;
+  text-align: center;
+
+  & img {
+    max-height: 80px;
+  }
+}
+
+.userInfo {
+  align-items: center;
+  color: var(--color-blue-secondary);
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.userIcon {
+  margin-left: var(--spacing-tiny);
+}
+
+.nav {
+  background-color: var(--color-blue-primary);
+  position: relative;
+
+  &:before {
+    box-shadow: inset 0 5px 5px 0px rgba(0, 0, 0, 0.2);
+    content: '';
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  & a {
+    color: var(--color-white);
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: var(--spacing-small) var(--spacing-medium);
+    text-decoration: none;
+
+    &:hover {
+      background-color: var(--color-yellow-secondary);
+    }
+
+    &.active {
+      background-color: var(--color-blue-secondary);
+    }
+  }
+}
+
+@custom-media --vp-s (width <= 700px);
+@custom-media --vp-m (width <= 900px);
+@custom-media --vp-l (width <= 1200px);
+
+@media (--vp-m) {
+  .topItems {
+    flex-direction: column;
+  }
+
+  .disclaimer {
+    flex-direction: column;
+    order: 2;
+  }
+
+  .disclaimerContact {
+    align-items: center;
+    border-width: 2px 0 0;
+    color: var(--color-blue-secondary);
+    display: flex;
+    height: 50px;
+    margin-left: unset;
+    margin-top: var(--spacing-medium);
+    padding-left: unset;
+    padding-top: var(--spacing-medium);
+  }
+
+  .logo {
+    max-width: unset;
+    order: 1;
+
+    & img {
+      max-height: 100px;
+    }
+  }
+
+  .userInfo {
+    margin-top: var(--spacing-large);
+    order: 3;
+  }
+}
+
+@media (--vp-s) {
+  .nav {
+    & .navContainer {
+      padding: 0;
+    }
+
+    & ul,
+    & li {
+      width: 100%;
+    }
+  }
+}
